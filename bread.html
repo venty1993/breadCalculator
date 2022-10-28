@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>초하 반죽 계산기</title>
+    <link rel="stylesheet" href="css/calc.css">
+</head>
+<body>
+    <h1>식빵파고</h1>
+
+    <div class="bread-calc">
+        <form action="">
+
+            <h2>단과자 반죽</h2>
+            <ul class="bread-list-container">
+                <li data-weight="205" class="bread-list chocolate">
+                    <label for="chocolate-radio">초콜릿</label>
+                    <span>0</span><input type="radio" name="chocolate-radio" id="" checked>
+                    <span>1</span><input type="radio" name="chocolate-radio" id="">
+                    <span>2</span><input type="radio" name="chocolate-radio" id="">
+                    <span>3</span><input type="radio" name="chocolate-radio" id="">
+                    <span>4</span><input type="radio" name="chocolate-radio" id="">
+                </li>
+                <li data-weight="215" class="bread-list ink">
+                    <label for="ink-radio">먹물치즈</label>
+                    <span>0</span><input type="radio" name="ink-radio" id="" checked>
+                    <span>1</span><input type="radio" name="ink-radio" id="">
+                    <span>2</span><input type="radio" name="ink-radio" id="">
+                    <span>3</span><input type="radio" name="ink-radio" id="">
+                    <span>4</span><input type="radio" name="ink-radio" id="">
+                </li>
+                <li data-weight="220" class="bread-list blueberry">
+                    <label for="blueberry-radio">블루베리</label>
+                    <span>0</span><input type="radio" name="blueberry-radio" id="" checked>
+                    <span>1</span><input type="radio" name="blueberry-radio" id="">
+                    <span>2</span><input type="radio" name="blueberry-radio" id="">
+                    <span>3</span><input type="radio" name="blueberry-radio" id="">
+                    <span>4</span><input type="radio" name="blueberry-radio" id="">
+                </li>
+                <li data-weight="220" class="bread-list pizza">
+                    <label for="pizza-radio">피자</label>
+                    <span>0</span><input type="radio" name="pizza-radio" id="" checked>
+                    <span>1</span><input type="radio" name="pizza-radio" id="">
+                    <span>2</span><input type="radio" name="pizza-radio" id="">
+                    <span>3</span><input type="radio" name="pizza-radio" id="">
+                    <span>4</span><input type="radio" name="pizza-radio" id="">
+                </li>
+                <li data-weight="220" class="bread-list cinamon">
+                    <label for="cinamon-radio">시나몬</label>
+                    <span>0</span><input type="radio" name="cinamon-radio" id="" checked>
+                    <span>1</span><input type="radio" name="cinamon-radio" id="">
+                    <span>2</span><input type="radio" name="cinamon-radio" id="">
+                    <span>3</span><input type="radio" name="cinamon-radio" id="">
+                    <span>4</span><input type="radio" name="cinamon-radio" id="">
+                </li>
+                <li data-weight="200" class="bread-list walnut">
+                    <label for="walnut-radio">호두</label>
+                    <span>0</span><input type="radio" name="walnut-radio" id="" checked>
+                    <span>1</span><input type="radio" name="walnut-radio" id="">
+                    <span>2</span><input type="radio" name="walnut-radio" id="">
+                    <span>3</span><input type="radio" name="walnut-radio" id="">
+                    <span>4</span><input type="radio" name="walnut-radio" id="">
+                </li>
+                <li data-weight="80" class="bread-list sausage">
+                    <label for="sausage-radio">소세지</label>
+                    <span>0</span><input type="radio" name="sausage-radio" id="" checked>
+                    <span>1</span><input type="radio" name="sausage-radio" id="">
+                    <span>2</span><input type="radio" name="sausage-radio" id="">
+                    <span>3</span><input type="radio" name="sausage-radio" id="">
+                    <span>4</span><input type="radio" name="sausage-radio" id="">
+                </li>
+                <li data-weight="160" class="bread-list angpang">
+                    <label for="angpang-radio">단팥빵</label>
+                    <span>0</span><input type="radio" name="angpang-radio" id="" checked>
+                    <span>1</span><input type="radio" name="angpang-radio" id="">
+                    <span>2</span><input type="radio" name="angpang-radio" id="">
+                    <span>3</span><input type="radio" name="angpang-radio" id="">
+                    <span>4</span><input type="radio" name="angpang-radio" id="">
+                </li>
+            </ul>
+            <div class="buttons">
+                <button type="button" onclick="danCalculate()">계산하기</button>
+                <button type="reset">초기화</button>
+            </div>
+            <div class="result">
+                <div class="result-heading">
+                    <h3>계산결과</h3>
+                    <p class="total-weight">총량 : <span id="total-weight-inner"></span></p>
+                </div>
+                <p class="result-place"></p>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/breadCalc.js"></script>
+</body>
+</html>

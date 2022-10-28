@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>초하 반죽 계산기</title>
+    <link rel="stylesheet" href="css/calc.css">
+</head>
+<body>
+    <h1>소금빵파고</h1>
+
+    <div class="bread-calc">
+        <form action="">
+
+            <h2>소금빵 반죽</h2>
+            <ul class="bread-list-container">
+                <li data-weight="58" class="bread-list angpang">
+                    <label for="salt">소금빵</label>
+                    <input type="number" name="" id="">
+                </li>
+                <li data-weight="140" class="bread-list angpang">
+                    <label for="garlic-radio">단팥빵</label>
+                    <span>0</span><input type="radio" name="angpang-radio" id="" checked>
+                    <span>1</span><input type="radio" name="angpang-radio" id="">
+                    <span>2</span><input type="radio" name="angpang-radio" id="">
+                    <span>3</span><input type="radio" name="angpang-radio" id="">
+                    <span>4</span><input type="radio" name="angpang-radio" id="">
+                </li>
+            </ul>
+            <div class="buttons">
+                <button type="button" onclick="danCalculate()">계산하기</button>
+                <button type="reset">초기화</button>
+            </div>
+            <div class="result">
+                <div class="result-heading">
+                    <h3>계산결과</h3>
+                    <p class="total-weight">총량 : <span id="total-weight-inner"></span></p>
+                </div>
+                <p class="result-place"></p>
+            </div>
+        </form>
+    </div>
+    <script src="js/saltCalc.js"></script>
+</body>
+</html>

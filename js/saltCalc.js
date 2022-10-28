@@ -2,31 +2,35 @@ function danCalculate() {
 
     const recipy = new Map();
 
-    recipy.set('강력', 0.5094594594594595,);
-    recipy.set('설탕', 0.022972972972972974,);
-    recipy.set('소금', 0.008783783783783784,);
-    recipy.set('개량제', 0.005067567567567568, );
-    recipy.set('이스트', 0.008783783783783784, );
-    recipy.set('버터', 0.060810810810810814,);
-    recipy.set('탕종', 0.05067567567567568,);
-    recipy.set('우유', 0.2277027027027027, );
-    recipy.set('계란', 0.10472972972972973);
-
+    recipy.set('강력', 24/464);
+    recipy.set('이스트', 4/464);
+    recipy.set('물', 26/464);
+    recipy.set('강력', 126/464);
+    recipy.set('중력', 126/464);
+    recipy.set('설탕', 6/464);
+    recipy.set('소금', 4/464);
+    recipy.set('버터', 14/464);
+    recipy.set('물', 140/464);
+    recipy.set('개량제', 2.5/464);
 
     let breadTotalWeight=0;
 
     const breadList = document.getElementsByClassName('bread-list');
-
     for(let i = 0 ; i < breadList.length ; i ++) {
         const inputs = new Array;
         for(let j = 0 ; j < breadList[i].childElementCount ; j ++) {
             if(breadList[i].children[j].tagName === 'INPUT')
             inputs.push(breadList[i].children[j])
         }
-        for(let j = 0 ; j < 5 ; j ++ ){
+        for(let j = 0 ; j < inputs.length ; j ++ ){
             if(inputs[j].checked) {
                 breadTotalWeight += Number(breadList[i].dataset.weight)*j;
             }
+            if(Number(inputs[j].value)){
+                breadTotalWeight += Number(breadList[i].dataset.weight)*inputs[j].value;
+            }
+            console.log(inputs[j].value)
+
         }
     }
 
