@@ -43,11 +43,11 @@ function danCalculate() {
     totalWeightInner.innerText = `${breadTotalWeight}g`
 
 
-    resultPlace.innerHTML += `사전반죽 <br>`
+    resultPlace.innerHTML += `<h4>사전반죽</h4> <br>`
     for(const [key, value] of pre) {
         resultPlace.innerHTML += `<span>${key} : ${(value*breadTotalWeight).toFixed(2)}g</span><br>`
     }
-    resultPlace.innerHTML += `<br>본 반죽 <br>`
+    resultPlace.innerHTML += `<br><h4>본 반죽</h4> <br>`
     for(const [key, value] of recipy) {
         resultPlace.innerHTML += `<span>${key} : ${(value*breadTotalWeight).toFixed(2)}g</span><br>`
     }
