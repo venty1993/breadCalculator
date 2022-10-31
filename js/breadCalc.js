@@ -36,7 +36,7 @@ function danCalculate() {
     totalWeightInner.innerText = `${breadTotalWeight}g`
 
     for(const [key, value] of recipy) {
-        resultPlace.innerHTML += `<span>${key} : ${(value*breadTotalWeight).toFixed(2)}g</span>`
+        resultPlace.innerHTML += `<span>${key} : ${(value*breadTotalWeight).toFixed(2)}g</span><br>`
     }
 
 

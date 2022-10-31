@@ -1,10 +1,13 @@
 function danCalculate() {
 
+    const pre = new Map();
+    pre.set('강력', 24/464);
+    pre.set('이스트', 4/464);
+    pre.set('물', 26/464);
+
+
     const recipy = new Map();
 
-    recipy.set('강력', 24/464);
-    recipy.set('이스트', 4/464);
-    recipy.set('물', 26/464);
     recipy.set('강력', 126/464);
     recipy.set('중력', 126/464);
     recipy.set('설탕', 6/464);
@@ -39,11 +42,15 @@ function danCalculate() {
     resultPlace.innerHTML = ``
     totalWeightInner.innerText = `${breadTotalWeight}g`
 
-    for(const [key, value] of recipy) {
-        resultPlace.innerHTML += `<span>${key} : ${(value*breadTotalWeight).toFixed(2)}g</span>`
+
+    resultPlace.innerHTML += `사전반죽 <br>`
+    for(const [key, value] of pre) {
+        resultPlace.innerHTML += `<span>${key} : ${(value*breadTotalWeight).toFixed(2)}g</span><br>`
     }
-
-
+    resultPlace.innerHTML += `<br>본 반죽 <br>`
+    for(const [key, value] of recipy) {
+        resultPlace.innerHTML += `<span>${key} : ${(value*breadTotalWeight).toFixed(2)}g</span><br>`
+    }
 
 
 
