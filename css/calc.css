@@ -13,7 +13,7 @@ h1 {
 }
 
 .bread-calc {
-    width: 300px;
+    width: 340px;
     /* height: 500px; */
     margin: 0 auto;
     border: 1px solid #aaa;
@@ -40,6 +40,7 @@ h1 {
 .bread-list > label {
     display: block;
     width: 100px;
+    margin-bottom: 8px;
 }
 
 .buttons {
@@ -70,4 +71,22 @@ h1 {
 
 .result-place > span {
     margin-right: 8px;
+}
+
+span + input {
+    position: relative;
+}
+
+span + input::after {
+    display: block;
+    position: absolute;
+    content: '';
+    margin: 0 8px;
+    width: 44px;
+    height: calc(100% + 16px);
+    border: 1px solid #AAA;
+    left: -36px;
+    top: -8px;
+    border-radius: 4px;
+
 }
