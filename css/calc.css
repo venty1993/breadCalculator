@@ -13,12 +13,13 @@ h1 {
 }
 
 .bread-calc {
-    width: 340px;
+    width: 360px;
     /* height: 500px; */
     margin: 0 auto;
     border: 1px solid #aaa;
-    padding: 32px;
+    padding: 16px;
     border-radius: 8px;
+    box-sizing: border-box;
 }
 
 .bread-list-container {
@@ -33,7 +34,7 @@ h1 {
 
 .bread-list {
     display: flex;
-    margin: 8px 0;
+    margin: 16px 0;
     justify-content: space-between;
 }
 
@@ -62,11 +63,6 @@ h1 {
 
 .total-weight {
     width: 150px;
-}
-
-.result-place {
-    /* display: flex; */
-    /* flex-wrap: wrap; */
 }
 
 .result-place > span {
