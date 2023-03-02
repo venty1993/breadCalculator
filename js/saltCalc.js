@@ -39,9 +39,8 @@ function danCalculate() {
 
     const resultPlace = document.querySelector('.result-place');
     const totalWeightInner = document.getElementById('total-weight-inner');
-    resultPlace.innerHTML = ``
+    resultReset();
     totalWeightInner.innerText = `${breadTotalWeight}g`
-
 
     resultPlace.innerHTML += `<h4>사전반죽</h4> <br>`
     for(const [key, value] of pre) {
@@ -52,6 +51,9 @@ function danCalculate() {
         resultPlace.innerHTML += `<span>${key} : ${(value*breadTotalWeight).toFixed(2)}g</span><br>`
     }
 
+    function resultReset() {
+        resultPlace.innerHTML = ``;
+    }
 
 
 

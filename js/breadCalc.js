@@ -17,16 +17,12 @@ function danCalculate() {
 
     const breadList = document.getElementsByClassName('bread-list');
 
-    for(let i = 0 ; i < breadList.length ; i ++) {
-        const inputs = new Array;
-        for(let j = 0 ; j < breadList[i].childElementCount ; j ++) {
-            if(breadList[i].children[j].tagName === 'INPUT')
-            inputs.push(breadList[i].children[j])
-        }
-        for(let j = 0 ; j < 5 ; j ++ ){
-            if(inputs[j].checked) {
-                breadTotalWeight += Number(breadList[i].dataset.weight)*j;
-            }
+    for (const key in breadList) {
+        if (Object.hasOwnProperty.call(breadList, key)) {
+            const element = breadList[key];
+            const count = element.children[1].value;
+            breadTotalWeight+=element.dataset.weight*count;
+            console.log(count);
         }
     }
 
