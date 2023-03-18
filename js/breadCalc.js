@@ -1,3 +1,28 @@
+const realTimeCalc = document.getElementsByClassName('real-time-calc');
+
+for (const key in realTimeCalc) {
+    if (Object.hasOwnProperty.call(realTimeCalc, key)) {
+        const element = realTimeCalc[key];
+        element.addEventListener('change', danCalculate)
+        
+    }
+}
+
+document.addEventListener('keydown', (e)=>{
+    if( e.key === 'Enter' ){
+        e.preventDefault()
+
+    }
+
+    if(document.activeElement.classList.contains('real-time-calc'))
+    setTimeout(() => {
+    
+        danCalculate();
+    }, 20);
+})
+
+
+
 function danCalculate() {
 
     const recipy = new Map();
