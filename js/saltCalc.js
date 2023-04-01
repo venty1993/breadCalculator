@@ -23,22 +23,49 @@ document.addEventListener('keydown', (e)=>{
 
 
 function danCalculate() {
+    let totalWeight = 0 ;
+    const amountOflour = 24 + 126 + 126
+
+    // 계량제 밀가루의 1.3%로 변경
+    //  보충수 추가 밀가루의 1.3%
+    // 본반죽 물 양 원래 양의 8% 추가
 
     const pre = new Map();
-    pre.set('강력', 24/464);
-    pre.set('이스트', 4/464);
-    pre.set('물', 26/464);
+    pre.set('강력', 24);
+    pre.set('이스트', 4);
+    pre.set('물', 26);
+    pre.set('개량제', amountOflour*0.013);
 
 
     const recipy = new Map();
 
-    recipy.set('강력', 126/464);
-    recipy.set('중력', 126/464);
-    recipy.set('설탕', 6/464);
-    recipy.set('소금', 4/464);
-    recipy.set('버터', 14/464);
-    recipy.set('물', 140/464);
-    recipy.set('개량제', 2.5/464);
+    recipy.set('강력', 126);
+    recipy.set('중력', 126);
+    recipy.set('설탕', 6);
+    recipy.set('소금', 4);
+    recipy.set('버터', 14);
+    recipy.set('물', 140*1.05);
+    recipy.set('보충수',amountOflour*0.013);
+
+    for (const [key,value] of pre) {
+
+        totalWeight += value;
+    }
+    for (const [key,value] of recipy) {
+        totalWeight += value;
+    }
+
+    console.log(totalWeight);
+
+    for (const [key,value] of pre) {
+        pre.set(key,value/totalWeight)
+    }
+    for (const [key,value] of recipy) {
+        recipy.set(key,value/totalWeight)
+    }
+
+
+
 
     let breadTotalWeight=0;
 
