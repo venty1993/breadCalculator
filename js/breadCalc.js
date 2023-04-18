@@ -34,7 +34,7 @@ function danCalculate() {
     recipy.set('소금' , recipy.get('강력')*0.017)
     recipy.set('개량제' ,recipy.get('강력')*0.013)
     recipy.set('이스트' , recipy.get('강력')*0.017)
-    recipy.set('버터' , recipy.get('강력')*0.12)
+    recipy.set('마가린' , recipy.get('강력')*0.12*1.05)
     recipy.set('탕종' , recipy.get('강력')*0.1)
     recipy.set('우유' , recipy.get('강력')*0.482)
     recipy.set('계란' , recipy.get('강력')*0.206)

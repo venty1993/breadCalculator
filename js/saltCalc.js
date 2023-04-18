@@ -43,8 +43,8 @@ function danCalculate() {
     recipy.set('중력', 126);
     recipy.set('설탕', 6);
     recipy.set('소금', 4);
-    recipy.set('버터', 14);
-    recipy.set('물', 140*1.05);
+    recipy.set('마가린', 14*1.05);
+    recipy.set('물', 140*1.05*0.96);
     recipy.set('보충수',amountOflour*0.013);
 
     for (const [key,value] of pre) {
